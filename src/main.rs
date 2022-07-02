@@ -14,8 +14,17 @@ fn get_user_input(prompt: &str) -> i32 {
     return number;
 }
 
+fn is_prime_number(number: i32) -> bool {
+    for i in 2..number {
+        if number % i == 0 {
+            return false;
+        }
+    }
+
+    return true;
+}
+
 fn main() {
     let number: i32 = get_user_input("Please enter an integer:");
-
-    println!("{}", number);
+    let mut largest_prime_factor = 0;
 }
