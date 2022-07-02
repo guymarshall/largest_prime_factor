@@ -2,19 +2,19 @@
 
 use std::io;
 
-fn get_user_input(prompt: &str) -> i32 {
+fn get_user_input(prompt: &str) -> u64 {
     println!("{}", prompt);
 
     let mut user_input: String = String::new();
 
     io::stdin().read_line(&mut user_input).expect("Failed to read line");
 
-    let number: i32 = user_input.trim().parse().expect("Please enter an integer!");
+    let number: u64 = user_input.trim().parse().expect("Please enter an integer!");
 
     return number;
 }
 
-fn is_prime_number(number: i32) -> bool {
+fn is_prime_number(number: u64) -> bool {
     for i in 2..number {
         if number % i == 0 {
             return false;
@@ -25,8 +25,8 @@ fn is_prime_number(number: i32) -> bool {
 }
 
 fn main() {
-    let number: i32 = get_user_input("Please enter an integer:");
-    let mut largest_prime_factor: i32 = 0;
+    let number: u64 = get_user_input("Please enter an integer:");
+    let mut largest_prime_factor: u64 = 0;
 
     for i in 1..number {
         if is_prime_number(i) {
