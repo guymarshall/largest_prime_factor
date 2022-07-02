@@ -26,7 +26,7 @@ fn is_prime_number(number: i32) -> bool {
 
 fn main() {
     let number: i32 = get_user_input("Please enter an integer:");
-    let mut largest_prime_factor = 0;
+    let mut largest_prime_factor: i32 = 0;
 
     for i in 1..number {
         if is_prime_number(i) {
