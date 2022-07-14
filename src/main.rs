@@ -15,19 +15,13 @@ fn get_user_input(prompt: &str) -> u64 {
 }
 
 fn is_prime_number(number: u64) -> bool {
-    // if number % 2 == 0 {
-    //     return false;
-    // }
-    // let mut counter: u64 = 3;
-    // while counter <= number {
-    //     if number % counter == 0 {
-    //         return false;
-    //     }
-    //     counter += 2;
-    // }
-    for i in 2..number {
+    if number % 2 == 0 {
+        return false;
+    }
+    let root_of_number: u64 = (number as f64).sqrt() as u64;
+    for i in (3..root_of_number).step_by(2) {
         if number % i == 0 {
-            return false;
+            return false
         }
     }
 
