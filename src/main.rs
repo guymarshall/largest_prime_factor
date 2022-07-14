@@ -38,6 +38,10 @@ fn main() {
                 largest_prime_factor = i;
             }
         }
+
+        if i % 1000000 == 0 {
+            println!("{}", i);
+        }
     }
 
     println!("Largest prime factor of {}: {}", number, largest_prime_factor);
