@@ -32,7 +32,7 @@ fn main() {
     let number: u64 = get_user_input("Please enter an integer:");
     let mut largest_prime_factor: u64 = 0;
 
-    for i in 1..number {
+    for i in 1..number + 1 {
         if is_prime_number(i) {
             if number % i == 0 {
                 largest_prime_factor = i;
